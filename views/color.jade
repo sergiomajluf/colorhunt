@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  .container
+    h3 Color template
+    
+    input(type='hidden', id='products', value='#{products}')
+    script
+      var output = '';
+      for (var property in #{products}) {
+        output += property + ': ' + #{products}[property]+'; ';
+      }
+      console.log(output);
+      
+      temp = {}
+      temp = JSON.stringify(#{products})
+    
+    script
+     console.log(#{products});
+  
+    script.
+      var products = []
+      var products = JSON.stringify(#{products})
+    
+    - console.log("products")
+      
+    ul
+      each product, index in products
+       li= index + ': ' + product[index]

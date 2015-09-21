@@ -1,0 +1,18 @@
+{
+  "name": "colorhunt",
+  "version": "0.1",
+  "description": "Colorhunt viz for ProductHunt",
+  "main": "app.js",
+  
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "author": "Sergio Majluf",
+  "license": "",
+  
+  
+  "devDependencies": {
+    "express": "~3.4.x"
+  }
+}
