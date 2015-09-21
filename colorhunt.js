@@ -83,8 +83,8 @@ module.exports = function(app) {
 	});
 	
 	app.get('/', function(req, res) {
-		//res.render('index', {oauth:req.session.ottw, oauths:req.session.ottws});
-		res.render('index');
+		res.render('index', {oauth:req.session.ottw, oauths:req.session.ottws});
+		//res.render('index');
 	});
 	
 	app.get('/p/:lid', function(req, res) {

@@ -5,25 +5,23 @@ block content
     h3 Color template
     
     input(type='hidden', id='products', value='#{products}')
-    script
-      var output = '';
-      for (var property in #{products}) {
-        output += property + ': ' + #{products}[property]+'; ';
-      }
-      console.log(output);
-      
-      temp = {}
-      temp = JSON.stringify(#{products})
-    
-    script
-     console.log(#{products});
-  
     script.
+      var products = !{JSON.stringify(products)};
+      /*
+      var output = '';
+      
+      for (var property in data) {
+        output += property + ': ' + data[property]+'; ';
+      }
+      console.log("this is output" + output);
+     
+      console.log(data);
+  
       var products = []
-      var products = JSON.stringify(#{products})
-    
-    - console.log("products")
+      var products = data
+      */
       
     ul
       each product, index in products
-       li= index + ': ' + product[index]
+       li
+         img(src=products[index].screenshot_url["300px"])
